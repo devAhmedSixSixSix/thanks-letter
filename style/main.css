@@ -1,0 +1,114 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* work */
+
+.envelope .box {
+  width: 600px;
+  height: 250px;
+  position: relative;
+  background-color: #e6e6e6;
+  position: relative;
+  box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
+}
+
+.envelope .box i:first-of-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: red;
+  animation: heart-beat 2s infinite;
+}
+
+@keyframes heart-beat {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    font-size: 64px;
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    font-size: 76px;
+  }
+}
+
+.envelope .box .massage {
+  width: 590px;
+  height: 245px;
+  background-color: #f2f2f2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px;
+  transition: 0.7s;
+}
+
+.envelope .box .massage i {
+  font-size: 32px;
+  color: red;
+  animation: none;
+}
+
+.envelope .box:hover .massage {
+  top: 20%;
+  transition-delay: 0.5s;
+}
+
+/* dont touch */
+.envelope .box .top::before {
+  /* dont touch */
+  content: ""; /* dont touch */
+  position: absolute; /* dont touch */
+  top: -200px; /* dont touch */
+  left: 0; /* dont touch */
+  border-style: solid; /* dont touch */
+  border-width: 100px 300px 100px 300px; /* dont touch */
+  border-color: transparent transparent #e6e6e6 transparent; /* dont touch */
+  -webkit-filterbox-shadow: 0px 0px 15px rgb(0 0 0 / 10%); /* dont touch */
+  filter: drop-shadow(0px 0px 15px rgb(0 0 0 / 10%)); /* dont touch */
+  opacity: 0; /* dont touch */
+  transition: 0.5s; /* dont touch */
+  border-radius: 10px; /* dont touch */
+} /* dont touch */
+.envelope .box:hover .top:before {
+  /* dont touch */
+  opacity: 1; /* dont touch */
+} /* dont touch */
+/* dont touch */
+
+.envelope .box .overlay {
+  border-style: solid;
+  border-width: 120px 300px 130px 300px;
+  border-color: #e6e6e6 transparent transparent transparent;
+  -webkit-filterbox-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
+  filter: drop-shadow(0px 0px 15px rgb(0 0 0 / 10%));
+  transition: 0.5s;
+}
+
+.envelope .box:hover .overlay {
+  border-color: transparent #e6e6e6 #e6e6e6 #e6e6e6;
+}
