@@ -1,3 +1,3 @@
 # description 
 
-drawing envelope with only css
+drawing envelope with css only
